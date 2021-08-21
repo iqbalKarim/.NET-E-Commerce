@@ -1,0 +1,11 @@
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+.mright-5 {
+  margin-right: 5px;
+}
+.dropdown-toggle,
+.dropdown-item {
+  cursor: pointer;
+}
