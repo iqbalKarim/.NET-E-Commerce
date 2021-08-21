@@ -1,0 +1,49 @@
+create database ONE_ProjectDatabase;
+use ONE_ProjectDatabase;
+
+create table AppUsers(
+	Id int not null Identity(1,1) primary key,
+	UserName varchar(255) not null,
+	PasswordHash varbinary(max),
+);
+
+
+create table Products (
+	Id int not null Identity(1,1) primary key,
+	ProductName varchar(255) not null,
+	CategoryName varchar(255) not null,
+	Price double precision not null,
+	Img text not null
+	);
+
+insert into Products (ProductName, CategoryName, Price, Img) 
+	values ('Samsung Galaxy S10','CellPhones', 150.50, 'https://images.priceoye.pk/samsung-galaxy-s10-pakistan-priceoye-v9pph-270x270.webp'),
+			('Samsung Galaxy S10 Plus','CellPhones', 100.0, 'https://images.priceoye.pk/samsung-galaxy-s10-5g-pakistan-priceoye-6qtpm-270x270.webp'),
+			('Samsung Galaxy S20','CellPhones', 200.50, 'https://images.priceoye.pk/samsung-galaxy-s20-pakistan-priceoye-g7e8q-270x270.webp'),
+			('Samsung Galaxy S20 Plus','CellPhones', 250.50, 'https://images.priceoye.pk/samsung-galaxy-s20-plus-pakistan-priceoye-6kfxy-270x270.webp'),
+			('Apple Iphone 11','CellPhones', 270.0, 'https://images.priceoye.pk/apple-iphone-xi-pakistan-priceoye-v9a8i-500x500.webp'),
+			('Apple Iphone 11 Pro','CellPhones', 300.50, 'https://images.priceoye.pk/apple-iphone-11-pro-pakistan-priceoye-5vt99-270x270.webp'),
+			('Bershka Hoodie','Apparell', 35.00,'https://images.asos-media.com/products/bershka-hoodie-with-dragon-back-print-in-white/23592239-1-white?$n_640w$&wid=513&fit=constrain'),
+			('Zara Hoodie','Apparell', 40.00, 'https://www.peekaboo.pk/wp-content/uploads/2020/09/ZARA-BLACK-PLUSH-SWEATSHIRT-WITH-SLOGAN.jpg'),
+			('North Face Snow Jacket','Apparell', 150.00, 'https://content.backcountry.com/images/items/1200/TNF/TNFZAAD/TITATNBL.jpg'),
+			('LCWaikiki Cap','Apparell', 15.75, 'https://img-lcwaikiki.mncdn.com/mnresize/600/-/pim/productimages/20211/4730158/l_20211-s14965z8-cth_a.jpg'),
+			('Koton Pyjamas','Apparell', 18.50, 'https://ktnimg.mncdn.com/mnresize/406/534/product-images/1KKB46975TK045/1500Wx1969H/1KKB46975TK045_G01_zoom1_V01.jpg'),
+			('Koton TShirt','Apparell', 20.00, 'https://www.tlyexpress.com/Uploads/UrunResimleri/buyuk/koton-0yak13691ek-kadin-t-shirt-1-4f6c.jpg'),
+			('Dell XPS 13','Laptops', 750.00, 'https://i.dell.com/is/image/DellContent//content/dam/global-site-design/product_images/dell_client_products/notebooks/xps_notebooks/xps_13_9300/pdp/notebook_laptop_xps_13_9300_npl_pdp_mod4.jpg?fmt=jpg'),
+			('Dell XPS 15','Laptops', 650.00, 'https://cdn.vox-cdn.com/thumbor/gWEalFzvResT2eDpxsmjQjtjON8=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/20030547/mchin_180905_4061_0009.jpg'),
+			('Dell XPS 17','Laptops', 600.00, 'https://www.cnet.com/a/img/XlzpfPLdDNLLhLY92ThlWBirNTA=/940x0/2020/05/12/47f08d3b-c5e7-4002-9128-1d5b6b9d778f/dell-xps-17.png'),
+			('Apple Macbook Pro M1','Laptops', 1000.00, 'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mbp-spacegray-select-202011?wid=1280&hei=1190&fmt=jpeg&qlt=80&.v=1613672894000'),
+			('Apple Macbook Air M1','Laptops', 850.00, 'https://www.techadvisor.com/cmsdata/reviews/3800588/apple_macbook_air_m1_2020_review_42_thumb1200_4-3.jpg'),
+			('Lenovo Legion 5','Laptops', 1200.00, 'https://www.lenovo.com/medias/lenovo-laptop-legion-5-17-amd-subseries-hero.png?context=bWFzdGVyfHJvb3R8MTc2MTk1fGltYWdlL3BuZ3xoMmUvaDY4LzExNTU4NDg1MzkzNDM4LnBuZ3w0MTZlYzRhMjVhMWYwMWJkMjBiZjk1NzBiMDNmOGZlZWM3YTdjMDlkZWI3MThjM2FlNGE1YjVmNDdjYWI0YmY3'),
+			('Dell AlienWare m17','Laptops', 1500.00, 'https://www.tejar.pk/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/d/e/dell_17.3_alienware_m17_r4_gaming_laptop3_-_tejar.jpg'),
+			('Dell AlienWare m15','Laptops', 1400.00, 'http://i.dell.com/sites/csimages/Video_Imagery/all/alienware-m15-r4-video-thumbnail-hero.jpg'),
+			('HP Omen 15','Laptops', 1100.00, 'https://product-images.www8-hp.com/digmedialib/prodimg/lowres/c06594994.png'),
+			('HP Omen 16','Laptops', 1050.00, 'https://www.omen.com/content/dam/sites/omen/worldwide/laptops/2021-omen-16-amd/s1-3-hero-banner-image-3-mobile@2x.png'),
+			('HP Omen 17','Laptops', 1200.00, 'https://www.omen.com/content/dam/sites/omen/worldwide/laptops/2021-omen-17-intel/Hero-Image-Desktop.png'),
+			('Sennheiser Momentum','Electronics', 600.00, 'https://cdn.alzashop.com/ImgW.ashx?fd=f16&cd=JM164x3'),
+			('Sony XM4','Electronics', 600.00, 'https://www.sony.com/image/5d02da5df552836db894cead8a68f5f3?fmt=pjpeg&wid=330&bgcolor=FFFFFF&bgc=FFFFFF'),
+			('Sony XM3','Electronics', 750.00, 'https://asset.conrad.com/media10/isa/160267/c1/-/en/1891709_BB_03_FB/image.jpg'),
+			('Braun Electronic Shaver','Electronics', 100.00, 'https://m.media-amazon.com/images/I/817HnLoRqkL._SY355_.jpg'),
+			('Westpoint Sandwich Maker','Electronics', 50.00, 'https://i1109.photobucket.com/albums/h427/jamshafiq_hussain/Shahrukh%20Nizami/Hassan%20Ahmed/215-sandwich-maker-wf-6193.gif'),
+			('Braun Microwave Oven','Electronics', 250.00, 'https://mir-s3-cdn-cf.behance.net/project_modules/1400/7462da54677389.599853a578a81.jpg');
+
